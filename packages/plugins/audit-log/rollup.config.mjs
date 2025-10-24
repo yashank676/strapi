@@ -1,0 +1,22 @@
+import { baseConfig } from '../../../rollup.utils.mjs';
+import { defineConfig } from 'rollup';
+
+export default defineConfig([
+  // Server build
+  baseConfig({
+    input: {
+      index: './server/src/index.ts',
+    },
+    rootDir: './server/src',
+    outDir: './dist/server',
+  }),
+  // Admin build
+  baseConfig({
+    input: {
+      index: './admin/src/index.ts',
+    },
+    rootDir: './admin/src',
+    outDir: './dist/admin',
+  }),
+]);
+
