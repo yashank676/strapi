@@ -1,0 +1,86 @@
+{
+  "kind": "collectionType",
+  "collectionName": "audit_logs",
+  "info": {
+    "singularName": "audit-log",
+    "pluralName": "audit-logs",
+    "displayName": "Audit Log",
+    "description": "Tracks all content changes in the system"
+  },
+  "options": {
+    "draftAndPublish": false,
+    "comment": ""
+  },
+  "pluginOptions": {
+    "content-manager": {
+      "visible": true
+    },
+    "content-type-builder": {
+      "visible": false
+    }
+  },
+  "attributes": {
+    "contentType": {
+      "type": "string",
+      "required": true,
+      "configurable": false
+    },
+    "targetDocumentId": {
+      "type": "string",
+      "required": false,
+      "configurable": false
+    },
+    "targetRecordId": {
+      "type": "integer",
+      "required": false,
+      "configurable": false
+    },
+    "action": {
+      "type": "enumeration",
+      "enum": ["create", "update", "delete", "publish", "unpublish"],
+      "required": true,
+      "configurable": false
+    },
+    "userId": {
+      "type": "integer",
+      "required": false,
+      "configurable": false
+    },
+    "username": {
+      "type": "string",
+      "required": false,
+      "configurable": false
+    },
+    "payload": {
+      "type": "json",
+      "required": false,
+      "configurable": false
+    },
+    "changedFields": {
+      "type": "json",
+      "required": false,
+      "configurable": false
+    },
+    "diff": {
+      "type": "json",
+      "required": false,
+      "configurable": false
+    },
+    "timestamp": {
+      "type": "datetime",
+      "required": true,
+      "configurable": false
+    },
+    "ipAddress": {
+      "type": "string",
+      "required": false,
+      "configurable": false
+    },
+    "userAgent": {
+      "type": "string",
+      "required": false,
+      "configurable": false
+    }
+  }
+}
+

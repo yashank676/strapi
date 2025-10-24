@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../dist/admin",
+    "rootDir": "./src",
+    "declarationDir": "../dist/admin/src"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["**/*.test.ts", "**/__tests__/**"]
+}
+
